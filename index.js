@@ -1,26 +1,45 @@
+'use strict';
+
 module.exports = {
-  extends: ['airbnb-base', 'plugin:import/errors', 'plugin:import/warnings'],
-  parserOptions: {
-    ecmaVersion: 2017,
-    sourceType: 'script',
-  },
   env: {
     browser: true,
     jquery: true,
     node: true,
-    mocha: true
+    mocha: true,
   },
-  plugins: [
-    'mocha'
+  extends: [
+    'airbnb-base',
+    'plugin:import/errors',
+    'plugin:import/warnings',
   ],
   globals: {
-    xjq: false
+    xjq: false,
   },
+  parserOptions: {
+    ecmaVersion: 2017,
+    sourceType: 'script',
+  },
+  plugins: ['mocha'],
   rules: {
-    strict: [ 'error', 'global' ],
-    // 'global-strict': 'error',
-    quotes: [ 'error', 'single' ],
-    'quote-props': ['error', 'as-needed'],
+    'array-callback-return': 'off',
+    'arrow-parens': ['error', 'always'],
+    'callback-return': 'error',
+    camelcase: 'warn',
+    'capitalized-comments': 'error',
+    'handle-callback-err': 'error',
+    'max-depth': ['error', 3],
+    'max-len': [
+      'error',
+      {
+        code: 150,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+      },
+    ],
+    'max-nested-callbacks': ['error', 5],
+    'max-params': ['error', 5],
     'mocha/handle-done-callback': 'error',
     'mocha/no-exclusive-tests': 'error',
     'mocha/no-global-tests': 'error',
@@ -29,36 +48,16 @@ module.exports = {
     'mocha/no-pending-tests': 'error',
     'mocha/no-return-and-callback': 'error',
     'mocha/no-sibling-hooks': 'error',
-
-    'array-callback-return': 'off', // I like using .map for side-effects, and .map is 70% faster than .forEach
-    'no-magic-numbers': 'off', // Code review should catch this
+    'no-magic-numbers': 'off',
     'no-console': 'error',
     'no-param-reassign': 'off',
-    'no-useless-call': 'error',
-    'callback-return': 'error',
-    'handle-callback-err': 'error',
-    'no-mixed-operators': [
-      'error',
-      {
-        groups: [
-          [ '&', '|', '^', '~', '<<', '>>', '>>>' ],
-          [ '==', '!=', '===', '!==', '>', '>=', '<', '<=' ],
-          [ '&&', '||' ],
-          [ 'in', 'instanceof' ],
-        ],
-        allowSamePrecedence: true,
-      },
-    ],
-    'no-underscore-dangle': 'off',
-    'max-len': ['error', {code: 150, ignoreUrls: true, ignoreStrings: true, ignoreTemplateLiterals: true, ignoreRegExpLiterals: true}],
-    camelcase: 'warn',
-    'arrow-parens': [ 'error', 'always' ],
     'no-plusplus': 'off',
     'no-process-env': 'error',
     'no-process-exit': 'error',
-    'capitalized-comments': 'error',
-    'max-depth': [ 'error', 3 ],
-    'max-nested-callbacks': [ 'error', 5 ],
-    'max-params': [ 'error', 5 ],
+    'no-useless-call': 'error',
+    'no-underscore-dangle': 'off',
+    quotes: ['error', 'single'],
+    'quote-props': ['error', 'as-needed'],
+    strict: ['error', 'global'],
   },
 };
