@@ -21,7 +21,7 @@ module.exports = {
   },
   plugins: ['mocha'],
   rules: {
-    'array-callback-return': 'off',
+    'array-callback-return': 'off', // I like using .map for side-effects, and .map is 70% faster than .forEach
     'arrow-parens': ['error', 'always'],
     'callback-return': 'error',
     camelcase: 'warn',
@@ -48,7 +48,7 @@ module.exports = {
     'mocha/no-pending-tests': 'error',
     'mocha/no-return-and-callback': 'error',
     'mocha/no-sibling-hooks': 'error',
-    'no-magic-numbers': 'off',
+    'no-magic-numbers': 'off', // Code review should catch this
     'no-console': 'error',
     'no-param-reassign': 'off',
     'no-plusplus': 'off',
