@@ -1,0 +1,33 @@
+{
+  "name": "@xtrctio/eslint-config",
+  "version": "1.0.0",
+  "description": "ESLint config for xtrct.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xtrctio/eslint.git"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "lint"
+  ],
+  "author": "Eric Hacke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xtrctio/eslint/issues"
+  },
+  "peerDependencies": {
+    "eslint": ">= 3",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-mocha": "^5.0.0"
+  },
+  "homepage": "https://github.com/xtrctio/eslint#readme",
+  "devDependencies": {
+    "fixpack": "^2.3.1"
+  }
+}
