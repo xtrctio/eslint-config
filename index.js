@@ -59,5 +59,19 @@ module.exports = {
     quotes: ['error', 'single'],
     'quote-props': ['error', 'as-needed'],
     strict: ['error', 'global'],
+    'valid-jsdoc': [
+      'error', {
+        'requireReturnDescription': false
+      }
+    ],
+    'require-jsdoc': [
+      'error',
+      {
+        require: {
+          MethodDefinition: true,
+          ClassDeclaration: true
+        }
+      }
+    ]
   },
 };
