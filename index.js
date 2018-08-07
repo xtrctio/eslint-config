@@ -61,7 +61,8 @@ module.exports = {
     strict: ['error', 'global'],
     'valid-jsdoc': [
       'error', {
-        'requireReturnDescription': false
+        'requireReturnDescription': false,
+        'requireParamDescription': false
       }
     ],
     'require-jsdoc': [
