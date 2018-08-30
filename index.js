@@ -7,6 +7,7 @@ module.exports = {
     node: true,
     mocha: true,
   },
+  parser: "babel-eslint",
   extends: [
     'airbnb-base',
     'plugin:import/errors',
