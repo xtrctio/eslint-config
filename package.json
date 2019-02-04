@@ -1,34 +1,35 @@
 {
   "name": "@xtrctio/eslint-config",
-  "version": "2.0.6",
   "description": "ESLint config for xtrct.io",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "2.0.6",
+  "author": "Eric Hacke",
+  "bugs": {
+    "url": "https://github.com/xtrctio/eslint-config/issues"
   },
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-mocha": "^5.2.1"
+  },
+  "files": [
+    "*.js",
+    "!scratch.*"
+  ],
+  "homepage": "https://github.com/xtrctio/eslint-config#readme",
+  "keywords": [
+    "config",
+    "eslint",
+    "lint"
+  ],
+  "license": "MIT",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xtrctio/eslint-config.git"
   },
-  "keywords": [
-    "eslint",
-    "config",
-    "lint"
-  ],
-  "author": "Eric Hacke",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/xtrctio/eslint-config/issues"
-  },
-  "homepage": "https://github.com/xtrctio/eslint-config#readme",
-  "dependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.9.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-mocha": "^5.2.0"
-  },
-  "devDependencies": {
-    "fixpack": "^2.3.1"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
