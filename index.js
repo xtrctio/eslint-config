@@ -18,6 +18,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'script',
+    ecmaFeatures: {
+      experimentalObjectRestSpread: true
+    }
   },
   plugins: ['mocha'],
   rules: {
