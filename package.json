@@ -10,6 +10,7 @@
     "eslint": "^5.13.0"
   },
   "dependencies": {
+    "@xtrctio/eslint-plugin-disallow-date": "^1.0.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-mocha": "^5.2.1"

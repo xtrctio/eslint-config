@@ -19,8 +19,10 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'script'
   },
-  plugins: ['mocha'],
+  plugins: ['mocha', '@xtrctio/disallow-date'],
   rules: {
+    '@xtrctio/disallow-date/no-new-date': 'error',
+    '@xtrctio/disallow-date/no-static-date': 'error',
     'array-callback-return': 'off', // I like using .map for side-effects, and .map is 70% faster than .forEach
     'arrow-parens': ['error', 'always'],
     'callback-return': 'error',
