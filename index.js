@@ -7,19 +7,22 @@ module.exports = {
     node: true,
     mocha: true,
   },
+  plugins: ['sonarjs', 'mocha', '@xtrctio/disallow-date'],
+  parserOptions: {
+    ecmaVersion: 9,
+  },
   extends: [
     'airbnb-base',
     'plugin:import/errors',
     'plugin:import/warnings',
+    'plugin:eslint-comments/recommended',
+    'plugin:sonarjs/recommended',
+    'plugin:promise/recommended',
+    'plugin:prettier/recommended',
   ],
   globals: {
     xjq: false,
   },
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'script'
-  },
-  plugins: ['mocha', '@xtrctio/disallow-date'],
   rules: {
     '@xtrctio/disallow-date/no-new-date': 'error',
     '@xtrctio/disallow-date/no-static-date': 'error',
@@ -50,7 +53,10 @@ module.exports = {
     'mocha/no-pending-tests': 'error',
     'mocha/no-return-and-callback': 'error',
     'mocha/no-sibling-hooks': 'error',
-    'no-magic-numbers': 'off', // Code review should catch this
+    'no-magic-numbers': ['error', {
+      "ignore": [1],
+      "enforceConst": true
+    }],
     'no-console': 'error',
     'no-param-reassign': 'off',
     'no-plusplus': 'off',
