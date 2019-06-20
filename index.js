@@ -54,7 +54,7 @@ module.exports = {
     'mocha/no-return-and-callback': 'error',
     'mocha/no-sibling-hooks': 'error',
     'no-magic-numbers': ['error', {
-      "ignore": [1],
+      "ignore": [0,1],
       "enforceConst": true
     }],
     'no-console': 'error',
